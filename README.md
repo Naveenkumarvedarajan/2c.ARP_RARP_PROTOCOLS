@@ -20,7 +20,7 @@ P
 
 Server
 
-
+```
 import socket
 s=socket.socket()
 s.bind(("localhost",8000))
@@ -34,9 +34,9 @@ while True:
     except KeyError:
         c.send("Not Found".encode())
 
-
+```
 Client
-
+```
 import socket
 s=socket.socket()
 s.connect(("localhost",8000))
@@ -44,7 +44,7 @@ while True:
     ip=input("Enter logical Adress : ")
     s.send(ip.encode())
     print("MAC Adress",s.recv(1024).decode())
-
+```
 
 ## OUPUT - ARP
 
